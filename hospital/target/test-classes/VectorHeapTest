@@ -1,0 +1,17 @@
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class VectorHeapTest {
+
+    @Test
+    public void testAddAndRetrieveElement() {
+        VectorHeap<Integer> vectorHeap = new VectorHeap<>();
+        vectorHeap.add(3);
+        vectorHeap.add(1);
+        vectorHeap.add(2);
+
+        assertEquals(Integer.valueOf(1), vectorHeap.poll());
+        assertEquals(Integer.valueOf(2), vectorHeap.poll());
+        assertEquals(Integer.valueOf(3), vectorHeap.poll());
+    }
+}
